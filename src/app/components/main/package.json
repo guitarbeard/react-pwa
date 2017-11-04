@@ -1,6 +1,6 @@
 {
-  "name": "Header",
+  "name": "Main",
   "version": "0.0.1",
   "private": true,
-  "main": "./header.js"
+  "main": "./main.js"
 }

@@ -11,25 +11,30 @@ export default {
     preload: false,
   },
   pwa: {
-    "name": "React Redux PWA Seo-ed",
-    "short_name": "RRPS",
+    "name": "React PWA",
+    "short_name": "ReactPWA",
     // Possible values ltr(left to right)/rtl(right to left)
     "dir": "ltr",
-    
+
     // language: Default en-US
     "lang": "en-US",
-    
+
     // Orientation of web-app possible:
     // any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary
     "orientation": "any",
+
     "start_url": "/",
-    "background_color": "#fff",
-    "theme_color": "#fff",
+    // Background color of the application
+    "background_color": "#17a2b8",
+
+    // Theme color, used to modify the status bar color etc
+    "theme_color": "#17a2b8",
+
     "display": "standalone",
-    "description": "Boilerplate for react, redux with server-side rendering for SEO and support for progressive web application"
+    "description": "A highly scalable, Progressive Web Application foundation with the best Developer Experience."
   },
   seo: {
-    title: "Common Title",
+    title: "Touchscreen",
     site_name: "My Site Name",
     description: "This is some temporary description, used if no other description is found",
     twitter: {

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { SCREEN_STATE_LOADING } from "../../../core/components/screen/action";
 import * as styles from "./loader.scss";
-import Header from "../header";
-import Footer from "../footer";
+import Sidebar from "../sidebar";
+import Main from "../main";
 import Transition from "../../../core/components/transition";
 
 @connect( state => {
@@ -17,24 +17,27 @@ export default class Loader extends Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        {
-          this.props.screenState === SCREEN_STATE_LOADING &&
-          (
-            <div className={styles["loader-section"]}>
-              <div className={styles["screen-loader"]} />
-            </div>
-          )
-        }
-        <Transition
-          className={styles["animator"]}
-          onEnterClassName={styles["fade-in"]}
-          onExitClassName={styles["fade-out"]}
-        >
-          {this.props.children || null}
-        </Transition>
-        <Footer />
+      <div className="container-fluid h-100">
+        <div className="row h-100">
+          <Sidebar/>
+          {
+            this.props.screenState === SCREEN_STATE_LOADING &&
+            (
+              <div className={styles["loader-section"]}>
+                <div className={styles["screen-loader"]} />
+              </div>
+            )
+          }
+          <Main>
+            <Transition
+              className={styles["animator"]}
+              onEnterClassName={styles["fade-in"]}
+              onExitClassName={styles["fade-out"]}
+            >
+              {this.props.children || null}
+            </Transition>
+          </Main>
+        </div>
       </div>
     );
   }

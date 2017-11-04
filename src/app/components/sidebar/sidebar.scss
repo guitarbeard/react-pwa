@@ -1,0 +1,18 @@
+.wrap {
+  background: purple;
+  .nav-item {
+    background: red;
+    .nav-link {
+      color: white;
+      &:focus, &:hover, &.active {
+        color: white!important;
+        text-decoration: underline;
+      }
+    }
+  }
+  a {
+    h1 {
+      width: 310px;
+    }
+  }
+}

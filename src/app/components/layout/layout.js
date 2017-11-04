@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Layout extends Component {
   render() {
     return (
-      <main className="container">
+      <main>
         {this.props.children}
       </main>
     );

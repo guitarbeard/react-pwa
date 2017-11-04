@@ -1,7 +1,5 @@
 .animator {
   opacity: 1;
-  -webkit-transition: opacity 0.25s linear;
-  -moz-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
 .animator.fade-in {

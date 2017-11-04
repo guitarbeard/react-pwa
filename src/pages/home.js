@@ -1,12 +1,15 @@
 import Home from "../app/components/home";
-import DefaultLayout from "../app/components/layout";
+import Layout from "../app/components/layout";
 
 const routes = [
   {
     path: "/",
     exact: true,
     component: Home,
-    layout: DefaultLayout,
+    layout: Layout,
+    seo: {
+      title: "Home"
+    }
   }
 ];
 export default routes;
